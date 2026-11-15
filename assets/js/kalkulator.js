@@ -28,11 +28,11 @@
     var rader = [
       ['Grunnpris', P.kr(u.grunnpris)],
       ['Ansatte (' + P.tall(u.enhet.ansatte) + ' × ' + P.sats(M.perAnsatt) + ')', P.kr(u.ansatte)],
-      [info.Teller + ' (' + P.tall(u.enhet.elever) + ' × ' + P.sats(M.perElev) + ')', P.kr(u.elever)]
+      [info.Teller + ' (' + P.tall(u.antallUnder) + ' × ' + P.sats(M.perElev) + ')', P.kr(u.eleverUnder)]
     ];
+    if (u.antallOver > 0) rader.push([info.Teller + ' over ' + P.tall(M.elevTerskel) + ' (' + P.tall(u.antallOver) + ' × ' + P.sats(M.perElevOver) + ')', P.kr(u.eleverOver)]);
     if (medLonn) rader.push(['Lønn (' + P.tall(u.enhet.ansatte) + ' × ' + P.sats(M.perAnsattLonn) + ')', P.kr(u.lonn)]);
-    rader.push(['Justering for type (' + P.faktorTekst(u.faktor) + ')', fortegn(u.typejustering)]);
-    if (u.gulvtillegg > 0) rader.push(['Opp til minstepris (' + P.kr(M.minMnd) + ' per måned)', fortegn(u.gulvtillegg)]);
+    if (u.typetillegg) rader.push(['Tillegg for ' + info.navn.toLowerCase(), fortegn(u.typetillegg)]);
     return rader;
   }
 

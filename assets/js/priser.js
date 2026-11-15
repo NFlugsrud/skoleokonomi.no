@@ -10,9 +10,9 @@
     el.textContent = P.sats(M[el.getAttribute('data-sats')]) + (el.getAttribute('data-enhet') || '');
   });
 
-  document.querySelectorAll('[data-typefaktorer]').forEach(function (el) {
-    el.textContent = P.TYPER.map(function (t) {
-      return t.navn + ' ' + P.faktorTekst(M.typeFaktor[t.id]);
+  document.querySelectorAll('[data-typetillegg]').forEach(function (el) {
+    el.textContent = P.TYPER.filter(function (t) { return M.typeTillegg[t.id]; }).map(function (t) {
+      return t.navn + ' + ' + P.kr(M.typeTillegg[t.id]) + ' /mnd';
     }).join(' · ');
   });
 

@@ -12,14 +12,22 @@
   //  Tallene er FORELØPIGE plassholdere og skal kalibreres mot reelle
   //  elev-/barnetall før lansering (se TODO.md).
   // ====================================================================
+  //
+  //  Tanken bak strukturen: det meste av arbeidet er likt uansett størrelse
+  //  (månedsavslutning, avstemming, rapportering), så grunnprisen bærer mest.
+  //  Ansatte og elever/barn er en tilnærming til bilagsmengden. Elevsatsen
+  //  halveres over en terskel, fordi merarbeidet per elev er lite i store enheter.
+  //  Lønnskjøring er det som faktisk følger antall ansatte, og prises deretter.
+  //  Forskjell mellom typer virksomhet er et fast tillegg, ikke en faktor.
   var PRISMODELL = {
-    grunnpris: 2500,          // kr/mnd basisarbeid per enhet
-    perAnsatt: 150,           // kr/mnd per ansatt
-    perElev: 18,              // kr/mnd per elev/barn
-    perAnsattLonn: 120,       // kr/mnd per ansatt HVIS lønnskjøring inkluderes
+    grunnpris: 5500,          // kr/mnd basisarbeid per enhet
+    perAnsatt: 75,            // kr/mnd per ansatt (uten lønnskjøring)
+    perElev: 9,               // kr/mnd per elev/barn opp til terskelen
+    elevTerskel: 200,         // antall elever/barn før lavere sats slår inn
+    perElevOver: 4.5,         // kr/mnd per elev/barn over terskelen
+    perAnsattLonn: 200,       // kr/mnd per ansatt HVIS lønnskjøring inkluderes
     arsoppgjor: 12000,        // kr/år per enhet (forberedelse, eks. revisjon)
-    minMnd: 3500,             // gulv: laveste månedspris per enhet
-    typeFaktor: { barnehage: 0.92, grunnskole: 1.0, ungdomsskole: 1.05, videregaaende: 1.15 },
+    typeTillegg: { barnehage: 0, grunnskole: 0, ungdomsskole: 0, videregaaende: 500 }, // kr/mnd
     sammenlignTimepris: 1090  // timepris brukt i sammenligningen mot timebasert byrå
   };
 
@@ -76,29 +84,32 @@
     return { enheter: enheter, arsoppgjor: t.arsoppgjor !== false, lonn: t.lonn === true };
   }
 
-  // Månedspris for én enhet. Hver rad avrundes til hele kroner, slik at radene alltid
-  // summerer nøyaktig til månedsprisen som vises.
+  // Månedspris for én enhet. Hver rad avrundes til hele kroner, og månedsprisen er summen
+  // av radene, slik at utregningen som vises alltid går opp.
   function beregnEnhet(enhet, medLonn, modell) {
     var m = modell || PRISMODELL;
     var e = nyEnhet(enhet);
-    var faktor = m.typeFaktor[e.type] || 1;
+    var terskel = m.elevTerskel > 0 ? Math.round(m.elevTerskel) : Infinity;
+    var antallUnder = Math.min(e.elever, terskel);
+    var antallOver = e.elever - antallUnder;
     var grunnpris = Math.round(m.grunnpris);
     var ansatte = Math.round(e.ansatte * m.perAnsatt);
-    var elever = Math.round(e.elever * m.perElev);
+    var eleverUnder = Math.round(antallUnder * m.perElev);
+    var eleverOver = Math.round(antallOver * m.perElevOver);
     var lonn = medLonn ? Math.round(e.ansatte * m.perAnsattLonn) : 0;
-    var delsum = grunnpris + ansatte + elever + lonn;
-    var justert = Math.round(delsum * faktor);
-    var mnd = Math.max(Math.round(m.minMnd), justert);
+    var typetillegg = Math.round((m.typeTillegg || {})[e.type] || 0);
     return {
       enhet: e,
-      faktor: faktor,
       grunnpris: grunnpris,
       ansatte: ansatte,
-      elever: elever,
+      antallUnder: antallUnder,
+      antallOver: antallOver,
+      eleverUnder: eleverUnder,
+      eleverOver: eleverOver,
+      elever: eleverUnder + eleverOver,
       lonn: lonn,
-      typejustering: justert - delsum,
-      gulvtillegg: mnd - justert,
-      mnd: mnd
+      typetillegg: typetillegg,
+      mnd: grunnpris + ansatte + eleverUnder + eleverOver + lonn + typetillegg
     };
   }
 
@@ -160,7 +171,6 @@
   function tall(v) { return tallformat.format(Math.round(v)).replace(/-/g, '−'); }
   function sats(v) { return satsformat.format(v); }
   function kr(v) { return tall(v) + ' kr'; }
-  function faktorTekst(f) { return '× ' + f.toFixed(2).replace('.', ','); }
   function enhetsnavn(e, i) { return e.navn || 'Enhet ' + (i + 1); }
 
   // Estimatet som ren tekst, én linje per element. Brukes i e-post fra kontaktskjemaet.
@@ -195,7 +205,6 @@
     tall: tall,
     sats: sats,
     kr: kr,
-    faktorTekst: faktorTekst,
     enhetsnavn: enhetsnavn,
     oppsummering: oppsummering
   };

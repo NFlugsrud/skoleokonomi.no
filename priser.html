@@ -81,34 +81,30 @@
       <ul class="hovedbok hovedbok--pris">
         <li class="hovedbok__rad">
           <p class="hovedbok__nokkel">01 · Grunnpris</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="grunnpris" data-enhet=" kr /mnd"></strong><br>Løpende bokføring, avstemming og periodisk rapportering. Basisen hver virksomhet trenger.</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="grunnpris" data-enhet=" kr /mnd"></strong><br>Løpende bokføring, avstemming og periodisk rapportering. Dette arbeidet er omtrent like stort uansett størrelse, og utgjør derfor det meste av prisen.</p>
         </li>
         <li class="hovedbok__rad">
           <p class="hovedbok__nokkel">02 · Per ansatt</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsatt" data-enhet=" kr /mnd"></strong><br>Følger lønns- og personalvolumet, som driver mye av den løpende føringen.</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsatt" data-enhet=" kr /mnd"></strong><br>Flere ansatte gir flere bilag, refusjoner og avstemminger, også når dere kjører lønn selv.</p>
         </li>
         <li class="hovedbok__rad">
           <p class="hovedbok__nokkel">03 · Per elev eller barn</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perElev" data-enhet=" kr /mnd"></strong><br>Speiler fakturering av skolepenger og foreldrebetaling, og kompleksiteten i tilskuddsforvaltningen.</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perElev" data-enhet=" kr /mnd"></strong><br>Speiler fakturering og oppfølging av skolepenger og foreldrebetaling. Over <span data-sats="elevTerskel"></span> elever eller barn er satsen <span data-sats="perElevOver" data-enhet=" kr"></span>, fordi merarbeidet per elev er mindre i store enheter.</p>
         </li>
         <li class="hovedbok__rad">
           <p class="hovedbok__nokkel">Tilvalg · Lønnskjøring</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsattLonn" data-enhet=" kr /mnd per ansatt"></strong><br>Lønnskjøring og a-melding hver måned.</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsattLonn" data-enhet=" kr /mnd per ansatt"></strong><br>Lønnskjøring og a-melding hver måned. Kommer i tillegg til prisen per ansatt.</p>
         </li>
         <li class="hovedbok__rad">
           <p class="hovedbok__nokkel">Tilvalg · Årsoppgjør</p>
           <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="arsoppgjor" data-enhet=" kr /år"></strong><br>Klargjøring av tallene før revisor, til en fast årlig pris per enhet. Revisjonen er ikke med.</p>
         </li>
         <li class="hovedbok__rad">
-          <p class="hovedbok__nokkel">Justering for type</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-typefaktorer></strong><br>Summen justeres etter typen virksomhet, fordi regelverk og rapportering krever ulikt.</p>
-        </li>
-        <li class="hovedbok__rad">
-          <p class="hovedbok__nokkel">Minstepris</p>
-          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="minMnd" data-enhet=" kr /mnd"></strong><br>Laveste månedspris per enhet.</p>
+          <p class="hovedbok__nokkel">Tillegg for type</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-typetillegg></strong><br>Videregående skoler rapporterer elevtall to ganger i året og har tilskuddssatser per utdanningsprogram. De andre typene har ikke tillegg.</p>
         </li>
       </ul>
-      <p class="merknad" style="margin-top:1.5rem;">Formelen: (grunnpris + ansatte × sats + elever × sats + eventuell lønnskjøring) × justering for type. Årsprisen er månedsprisen × 12, pluss årsoppgjør. Alle priser er uten merverdiavgift.</p>
+      <p class="merknad" style="margin-top:1.5rem;">Formelen: grunnpris + ansatte × sats + elever × sats + eventuell lønnskjøring + eventuelt tillegg for type. Årsprisen er månedsprisen × 12, pluss årsoppgjør. Alle priser er uten merverdiavgift.</p>
     </div>
   </section>
 
