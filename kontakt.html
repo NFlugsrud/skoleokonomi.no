@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt – Skoleøkonomi</title>
+<meta name="description" content="Send oss antall ansatte og elever, så får dere et konkret pristilbud og en uforpliktende prat om hvordan en overgang kan se ut.">
+<!-- FELLES:hode -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://xn--skolekonomi-kgb.no/kontakt.html">
+<meta property="og:url" content="https://xn--skolekonomi-kgb.no/kontakt.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Skoleøkonomi">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Kontakt – Skoleøkonomi">
+<meta property="og:description" content="Send oss antall ansatte og elever, så får dere et konkret pristilbud og en uforpliktende prat om hvordan en overgang kan se ut.">
+<meta name="theme-color" content="#F2F3EE">
+<link rel="icon" href="assets/bilder/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/stil.css">
+<link rel="stylesheet" href="assets/css/utskrift.css" media="print">
+<script>document.documentElement.className += ' js';</script>
+<!-- /FELLES:hode -->
+</head>
+<body>
+<!-- FELLES:topp -->
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<aside class="utkast pa-blekk" aria-label="Status for nettstedet">
+  <div class="wrap utkast__rad">
+    <span class="utkast__merke">Utkast</span>
+    <span class="utkast__tekst">Nettstedet er under arbeid og er ikke lansert.</span>
+    <button type="button" class="utkast__knapp" data-bekreft-bryter aria-pressed="false" hidden>Vis punkter som må bekreftes</button>
+  </div>
+</aside>
+<header class="topp">
+  <div class="wrap topp__rad">
+    <a class="merke" href="index.html"><span class="merke__rute" aria-hidden="true"></span>Skoleøkonomi</a>
+    <button type="button" class="meny-knapp" aria-expanded="false" aria-controls="hovedmeny"><span class="meny-knapp__ikon" aria-hidden="true"></span>Meny</button>
+    <nav class="meny" id="hovedmeny" aria-label="Hovedmeny">
+      <ul class="meny__liste">
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="sektorkunnskap.html">Sektorkunnskap</a></li>
+        <li><a href="arshjul.html">Årshjul</a></li>
+        <li><a href="bytte-regnskapsforer.html">Bytte byrå</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+      </ul>
+      <a class="knapp knapp--kant" href="priser.html">Regn ut fastpris</a>
+    </nav>
+  </div>
+</header>
+<!-- /FELLES:topp -->
+
+<main id="innhold">
+
+  <section class="sidehode">
+    <div class="wrap">
+      <div class="sidehode__tekst">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Ta kontakt.</h1>
+        <p class="lede">Send oss antall ansatte og elever, så får dere et konkret pristilbud og en uforpliktende prat om hvordan en overgang kan se ut.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon seksjon--tett">
+    <div class="wrap">
+      <div class="to-kol">
+
+        <div>
+          <form class="skjema" data-kontaktskjema action="mailto:post@skoleøkonomi.no" method="post" enctype="text/plain" novalidate>
+            <div class="feilsammendrag" data-feilsammendrag role="alert" tabindex="-1" hidden></div>
+
+            <div class="skjema__rad">
+              <div class="felt">
+                <label for="k-navn">Navn</label>
+                <input class="inndata" id="k-navn" name="Navn" type="text" autocomplete="name" required aria-describedby="k-navn-feil">
+                <p class="felt__feil" id="k-navn-feil">Skriv inn navnet ditt.</p>
+              </div>
+              <div class="felt">
+                <label for="k-rolle">Rolle <span class="felt__valgfri">(valgfritt)</span></label>
+                <select class="inndata" id="k-rolle" name="Rolle">
+                  <option value="">Velg</option>
+                  <option>Daglig leder</option>
+                  <option>Rektor</option>
+                  <option>Styrer</option>
+                  <option>Styreleder</option>
+                  <option>Økonomiansvarlig</option>
+                  <option>Annet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="felt">
+              <label for="k-virksomhet">Skole eller barnehage</label>
+              <input class="inndata" id="k-virksomhet" name="Virksomhet" type="text" autocomplete="organization" required aria-describedby="k-virksomhet-feil">
+              <p class="felt__feil" id="k-virksomhet-feil">Skriv inn navnet på virksomheten.</p>
+            </div>
+
+            <div class="skjema__rad">
+              <div class="felt">
+                <label for="k-epost">E-post</label>
+                <input class="inndata" id="k-epost" name="E-post" type="email" autocomplete="email" required aria-describedby="k-epost-feil">
+                <p class="felt__feil" id="k-epost-feil">Skriv inn en gyldig e-postadresse, for eksempel navn@skolen.no.</p>
+              </div>
+              <div class="felt">
+                <label for="k-telefon">Telefon <span class="felt__valgfri">(valgfritt)</span></label>
+                <input class="inndata" id="k-telefon" name="Telefon" type="tel" autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="felt">
+              <label for="k-gjelder">Hva gjelder det?</label>
+              <select class="inndata" id="k-gjelder" name="Gjelder">
+                <option>Pristilbud</option>
+                <option>Bytte av regnskapsfører</option>
+                <option>Spørsmål</option>
+                <option>Annet</option>
+              </select>
+            </div>
+
+            <div class="felt">
+              <label for="k-melding">Melding <span class="felt__valgfri">(valgfritt)</span></label>
+              <textarea class="inndata" id="k-melding" name="Melding" rows="5" aria-describedby="k-melding-hjelp"></textarea>
+              <p class="felt__hjelp" id="k-melding-hjelp">For eksempel antall enheter, hvem som fører regnskapet i dag, og når dere ser for dere å bytte.</p>
+            </div>
+
+            <div class="boks" data-estimat hidden>
+              <h2 class="boks__tittel">Estimatet fra kalkulatoren</h2>
+              <ul class="estimatliste" data-estimat-linjer></ul>
+              <label class="kryss"><input type="checkbox" data-estimat-med checked> Legg ved estimatet i henvendelsen</label>
+            </div>
+
+            <div>
+              <button class="knapp" type="submit">Send henvendelsen</button>
+              <p class="felt__hjelp" style="margin-top:.8rem;">Skjemaet åpner e-postprogrammet ditt med en ferdig utfylt e-post. Ingenting sendes før du trykker send der. Se <a href="personvern.html">personvern</a>.</p>
+            </div>
+          </form>
+
+          <div class="boks" data-kontakt-resultat tabindex="-1" hidden>
+            <h2 class="boks__tittel">E-posten er klar</h2>
+            <p>E-postprogrammet ditt skal ha åpnet seg med henvendelsen ferdig utfylt. Skjedde det ikke? Kopier teksten under og send den til <a class="mono" data-kontakt-adresse href="mailto:post@skoleøkonomi.no">post@skoleøkonomi.no</a>.</p>
+            <pre class="forhandsvisning" data-kontakt-tekst></pre>
+            <div class="knapperad">
+              <button type="button" class="knapp knapp--kant knapp--liten" data-kontakt-kopier>Kopier teksten</button>
+              <button type="button" class="knapp knapp--kant knapp--liten" data-kontakt-tilbake>Tilbake til skjemaet</button>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="boks boks--blekk pa-blekk">
+            <p class="status">Tar imot de første oppdragene fra 2027</p>
+            <h2 class="boks__tittel" style="margin-top:1rem;">Direkte på e-post</h2>
+            <p><a class="epost" href="mailto:post@skoleøkonomi.no">post@skoleøkonomi.no</a></p>
+          </div>
+          <div style="margin-top:2rem;">
+            <p class="eyebrow">Slik går det videre</p>
+            <ol class="hovedbok" style="margin-top:1rem;">
+              <li class="hovedbok__rad hovedbok__rad--smal"><p class="hovedbok__nokkel">01</p><p class="hovedbok__tekst">Dere sender henvendelsen, gjerne med estimatet fra kalkulatoren.</p></li>
+              <li class="hovedbok__rad hovedbok__rad--smal"><p class="hovedbok__nokkel">02</p><p class="hovedbok__tekst">Vi tar en kort gjennomgang av virksomheten sammen.</p></li>
+              <li class="hovedbok__rad hovedbok__rad--smal"><p class="hovedbok__nokkel">03</p><p class="hovedbok__tekst">Dere får et konkret pristilbud.</p></li>
+            </ol>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FELLES:bunn -->
+<footer class="bunn">
+  <div class="wrap">
+    <div class="bunn__rutenett">
+      <div class="bunn__om">
+        <a class="merke" href="index.html"><span class="merke__rute" aria-hidden="true"></span>Skoleøkonomi</a>
+        <p>Regnskap og økonomitjenester for private skoler og barnehager.</p>
+        <p class="status">Tar imot de første oppdragene fra 2027</p>
+      </div>
+      <nav aria-label="Sider">
+        <h2 class="bunn__tittel">Sider</h2>
+        <ul>
+          <li><a href="tjenester.html">Tjenester</a></li>
+          <li><a href="priser.html">Fastpris</a></li>
+          <li><a href="bytte-regnskapsforer.html">Bytte byrå</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ressurser">
+        <h2 class="bunn__tittel">Ressurser</h2>
+        <ul>
+          <li><a href="sektorkunnskap.html">Sektorkunnskap</a></li>
+          <li><a href="arshjul.html">Årshjul</a></li>
+          <li><a href="sporsmal-og-svar.html">Spørsmål og svar</a></li>
+          <li><a href="personvern.html">Personvern</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="bunn__tittel">Kontakt</h2>
+        <ul>
+          <li><a class="mono" href="mailto:post@skoleøkonomi.no">post@skoleøkonomi.no</a></li>
+          <li><a href="kontakt.html">Kontaktskjema</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bunn__linje">
+      <span>© <span data-ar></span> Skoleøkonomi</span>
+      <span class="mono">skoleøkonomi.no</span>
+    </div>
+  </div>
+</footer>
+<script defer src="assets/js/konfig.js"></script>
+<script defer src="assets/js/felles.js"></script>
+<script defer src="assets/js/utkast.js"></script>
+<!-- /FELLES:bunn -->
+<script defer src="assets/js/prismodell.js"></script>
+<script defer src="assets/js/kontakt.js"></script>
+</body>
+</html>

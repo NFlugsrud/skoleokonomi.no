@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fastpris: regn ut hva regnskapet koster – Skoleøkonomi</title>
+<meta name="description" content="Fastpriskalkulator for regnskap i private skoler og barnehager. Åpen modell: grunnpris, pris per ansatt og pris per elev eller barn.">
+<!-- FELLES:hode -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://xn--skolekonomi-kgb.no/priser.html">
+<meta property="og:url" content="https://xn--skolekonomi-kgb.no/priser.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Skoleøkonomi">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Fastpris: regn ut hva regnskapet koster – Skoleøkonomi">
+<meta property="og:description" content="Fastpriskalkulator for regnskap i private skoler og barnehager. Åpen modell: grunnpris, pris per ansatt og pris per elev eller barn.">
+<meta name="theme-color" content="#F2F3EE">
+<link rel="icon" href="assets/bilder/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/stil.css">
+<link rel="stylesheet" href="assets/css/utskrift.css" media="print">
+<script>document.documentElement.className += ' js';</script>
+<!-- /FELLES:hode -->
+</head>
+<body>
+<!-- FELLES:topp -->
+<a class="hopp" href="#innhold">Hopp til innhold</a>
+<aside class="utkast pa-blekk" aria-label="Status for nettstedet">
+  <div class="wrap utkast__rad">
+    <span class="utkast__merke">Utkast</span>
+    <span class="utkast__tekst">Nettstedet er under arbeid og er ikke lansert.</span>
+    <button type="button" class="utkast__knapp" data-bekreft-bryter aria-pressed="false" hidden>Vis punkter som må bekreftes</button>
+  </div>
+</aside>
+<header class="topp">
+  <div class="wrap topp__rad">
+    <a class="merke" href="index.html"><span class="merke__rute" aria-hidden="true"></span>Skoleøkonomi</a>
+    <button type="button" class="meny-knapp" aria-expanded="false" aria-controls="hovedmeny"><span class="meny-knapp__ikon" aria-hidden="true"></span>Meny</button>
+    <nav class="meny" id="hovedmeny" aria-label="Hovedmeny">
+      <ul class="meny__liste">
+        <li><a href="tjenester.html">Tjenester</a></li>
+        <li><a href="sektorkunnskap.html">Sektorkunnskap</a></li>
+        <li><a href="arshjul.html">Årshjul</a></li>
+        <li><a href="bytte-regnskapsforer.html">Bytte byrå</a></li>
+        <li><a href="om-oss.html">Om oss</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <a class="knapp knapp--kant" href="priser.html" aria-current="page">Regn ut fastpris</a>
+    </nav>
+  </div>
+</header>
+<!-- /FELLES:topp -->
+
+<main id="innhold">
+
+  <section class="sidehode">
+    <div class="wrap">
+      <div class="sidehode__tekst">
+        <p class="eyebrow">Fastpris</p>
+        <h1>En åpen modell, ikke en timeteller.</h1>
+        <p class="lede">Du betaler for å ha regnskapet i orden, ikke for timene vi bruker. Prisen følger størrelsen på virksomheten, så dere vet hva den koster hele året.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="kalk-seksjon" id="kalkulator" aria-label="Fastpriskalkulator">
+    <div class="wrap">
+      <div data-kalkulator>
+        <p class="kalk__tom">Kalkulatoren trenger JavaScript for å regne. Send oss antall ansatte og antall elever eller barn på e-post, så regner vi ut prisen for dere.</p>
+      </div>
+      <p class="kalk-note">Estimatet er veiledende og fastsettes endelig etter en kort gjennomgang av virksomheten. Modellen og satsene er under utarbeidelse.</p>
+    </div>
+  </section>
+
+  <section class="seksjon" id="modell">
+    <div class="wrap">
+      <div class="seksjon__hode">
+        <p class="eyebrow">Slik regner vi</p>
+        <h2>Tre deler som følger størrelsen.</h2>
+        <p>Prisen bygges av en grunnpris, en pris per ansatt og en pris per elev eller barn. Har dere flere enheter, regnes hver enhet for seg.</p>
+      </div>
+      <ul class="hovedbok hovedbok--pris">
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">01 · Grunnpris</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="grunnpris" data-enhet=" kr /mnd"></strong><br>Løpende bokføring, avstemming og periodisk rapportering. Basisen hver virksomhet trenger.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">02 · Per ansatt</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsatt" data-enhet=" kr /mnd"></strong><br>Følger lønns- og personalvolumet, som driver mye av den løpende føringen.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">03 · Per elev eller barn</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perElev" data-enhet=" kr /mnd"></strong><br>Speiler fakturering av skolepenger og foreldrebetaling, og kompleksiteten i tilskuddsforvaltningen.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">Tilvalg · Lønnskjøring</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="perAnsattLonn" data-enhet=" kr /mnd per ansatt"></strong><br>Lønnskjøring og a-melding hver måned.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">Tilvalg · Årsoppgjør</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="arsoppgjor" data-enhet=" kr /år"></strong><br>Klargjøring av tallene før revisor, til en fast årlig pris per enhet. Revisjonen er ikke med.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">Justering for type</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-typefaktorer></strong><br>Summen justeres etter typen virksomhet, fordi regelverk og rapportering krever ulikt.</p>
+        </li>
+        <li class="hovedbok__rad">
+          <p class="hovedbok__nokkel">Minstepris</p>
+          <p class="hovedbok__tekst"><strong class="hovedbok__verdi" data-sats="minMnd" data-enhet=" kr /mnd"></strong><br>Laveste månedspris per enhet.</p>
+        </li>
+      </ul>
+      <p class="merknad" style="margin-top:1.5rem;">Formelen: (grunnpris + ansatte × sats + elever × sats + eventuell lønnskjøring) × justering for type. Årsprisen er månedsprisen × 12, pluss årsoppgjør. Alle priser er uten merverdiavgift.</p>
+    </div>
+  </section>
+
+  <section class="seksjon" id="eksempler">
+    <div class="wrap">
+      <div class="seksjon__hode">
+        <p class="eyebrow">Regneeksempler</p>
+        <h2>Tre virksomheter, tre priser.</h2>
+        <p>Eksemplene er regnet med satsene over, med årsoppgjør og uten lønnskjøring.</p>
+      </div>
+      <div class="rutenett rutenett--3">
+        <div class="rute" data-eksempel="barnehage.12.60">
+          <span class="rute__merke">Barnehage</span>
+          <h3>12 ansatte, 60 barn</h3>
+        </div>
+        <div class="rute" data-eksempel="grunnskole.25.180">
+          <span class="rute__merke">Grunnskole</span>
+          <h3>25 ansatte, 180 elever</h3>
+        </div>
+        <div class="rute" data-eksempel="videregaaende.40.300">
+          <span class="rute__merke">Videregående</span>
+          <h3>40 ansatte, 300 elever</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seksjon" id="inkludert">
+    <div class="wrap">
+      <div class="seksjon__hode">
+        <p class="eyebrow">Hva prisen dekker</p>
+        <h2>Med, tilvalg og utenfor.</h2>
+      </div>
+      <div class="rutenett rutenett--3">
+        <div class="rute">
+          <span class="rute__merke">Med i fastprisen</span>
+          <ul class="liste">
+            <li>Løpende bokføring og avstemming</li>
+            <li>Fakturering av skolepenger og foreldrebetaling</li>
+            <li>Føring og dokumentasjon av tilskudd</li>
+            <li>Periodisk rapportering til ledelse og styre</li>
+            <li>Oppstart og overføring fra dagens byrå</li>
+          </ul>
+        </div>
+        <div class="rute">
+          <span class="rute__merke">Tilvalg</span>
+          <ul class="liste">
+            <li>Årsoppgjør: klargjøring til revisor</li>
+            <li>Lønnskjøring og a-melding</li>
+            <li>Controller og budsjettstøtte, som avtales for seg</li>
+          </ul>
+        </div>
+        <div class="rute">
+          <span class="rute__merke">Utenfor</span>
+          <ul class="liste">
+            <li>Revisjon, som gjøres av ekstern revisor</li>
+            <li>Større engangsoppdrag, som avtales for seg</li>
+          </ul>
+        </div>
+      </div>
+      <p class="seksjon__fot"><a class="pil" href="sporsmal-og-svar.html">Spørsmål og svar om pris og avtale</a></p>
+    </div>
+  </section>
+
+  <section class="seksjon seksjon--flat">
+    <div class="wrap">
+      <div class="kontaktblokk pa-blekk">
+        <p class="status">Tar imot de første oppdragene fra 2027</p>
+        <h2>Vil dere ha et konkret pristilbud?</h2>
+        <p>Send estimatet til oss fra kalkulatoren, eller ta kontakt. Endelig pris settes etter en kort gjennomgang av virksomheten.</p>
+        <div class="knapperad">
+          <a class="knapp knapp--lys" href="kontakt.html">Ta kontakt</a>
+          <a class="epost" href="mailto:post@skoleøkonomi.no">post@skoleøkonomi.no</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FELLES:bunn -->
+<footer class="bunn">
+  <div class="wrap">
+    <div class="bunn__rutenett">
+      <div class="bunn__om">
+        <a class="merke" href="index.html"><span class="merke__rute" aria-hidden="true"></span>Skoleøkonomi</a>
+        <p>Regnskap og økonomitjenester for private skoler og barnehager.</p>
+        <p class="status">Tar imot de første oppdragene fra 2027</p>
+      </div>
+      <nav aria-label="Sider">
+        <h2 class="bunn__tittel">Sider</h2>
+        <ul>
+          <li><a href="tjenester.html">Tjenester</a></li>
+          <li><a href="priser.html">Fastpris</a></li>
+          <li><a href="bytte-regnskapsforer.html">Bytte byrå</a></li>
+          <li><a href="om-oss.html">Om oss</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ressurser">
+        <h2 class="bunn__tittel">Ressurser</h2>
+        <ul>
+          <li><a href="sektorkunnskap.html">Sektorkunnskap</a></li>
+          <li><a href="arshjul.html">Årshjul</a></li>
+          <li><a href="sporsmal-og-svar.html">Spørsmål og svar</a></li>
+          <li><a href="personvern.html">Personvern</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="bunn__tittel">Kontakt</h2>
+        <ul>
+          <li><a class="mono" href="mailto:post@skoleøkonomi.no">post@skoleøkonomi.no</a></li>
+          <li><a href="kontakt.html">Kontaktskjema</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bunn__linje">
+      <span>© <span data-ar></span> Skoleøkonomi</span>
+      <span class="mono">skoleøkonomi.no</span>
+    </div>
+  </div>
+</footer>
+<script defer src="assets/js/konfig.js"></script>
+<script defer src="assets/js/felles.js"></script>
+<script defer src="assets/js/utkast.js"></script>
+<!-- /FELLES:bunn -->
+<script defer src="assets/js/prismodell.js"></script>
+<script defer src="assets/js/kalkulator.js"></script>
+<script defer src="assets/js/priser.js"></script>
+</body>
+</html>

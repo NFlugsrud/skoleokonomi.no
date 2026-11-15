@@ -1,0 +1,41 @@
+/* Utskrift. To moduser: vanlig utskrift av en side, og utskrift av estimatarket
+   fra kalkulatoren (html.skriv-estimat). Lastes bare ved utskrift (media="print"). */
+@page{margin:18mm 16mm;}
+html,body{background:#fff !important;color:#000;}
+body{font-size:10.5pt;}
+.topp,.bunn,.utkast,.hopp,.varsel,.bekreft-panel,.ikke-skriv,
+.kalk__verktoy,.kalk__flyt,.kalk__leggtil,.kalk__idag,.kalk__vis,.skyv,.enhet__fjern{display:none !important;}
+.hero::before,.sidehode::before{display:none;}
+.hero,.sidehode{padding:0 0 1.5rem;}
+.seksjon{padding:1.5rem 0;}
+.inn{opacity:1 !important;transform:none !important;}
+h1,h2,h3{break-after:avoid;}
+.rute,.hovedbok__rad,.sporsmal,.sjekk li,.punkt,tr{break-inside:avoid;}
+.kalk{box-shadow:none;break-inside:avoid;}
+.kalk__ut,.kontaktblokk,.boks--blekk{background:#fff !important;color:#000 !important;border:1px solid #000;}
+.kalk__ut *,.kontaktblokk *,.boks--blekk *{color:#000 !important;}
+.bok tr{border-color:#999 !important;}
+a{text-decoration:underline;}
+.knapp{border:1px solid #000;background:#fff !important;color:#000 !important;}
+
+/* Estimatarket: bare arket skrives ut. */
+html.skriv-estimat body > *:not(.estimatark){display:none !important;}
+html.skriv-estimat .estimatark{display:block !important;}
+.estimatark{font-family:"Inter",system-ui,sans-serif;color:#15251D;}
+.ea__topp{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid #15251D;padding-bottom:8pt;margin-bottom:22pt;}
+.ea__merke{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:15pt;display:flex;align-items:center;gap:7pt;}
+.ea__merke .merke__rute{width:7pt;height:7pt;background:#2C6E55 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.ea__dato{font-family:"IBM Plex Mono",monospace;font-size:8.5pt;}
+.estimatark h1{font-size:22pt;margin-bottom:6pt;}
+.ea__ingress{color:#586059;margin-bottom:18pt;max-width:130mm;}
+.estimatark h2{font-family:"IBM Plex Mono",monospace;font-size:7.5pt;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:#2C6E55;margin:18pt 0 6pt;}
+.ea__tabell{width:100%;border-collapse:collapse;font-size:9.5pt;}
+.ea__tabell th,.ea__tabell td{text-align:left;padding:5pt 8pt 5pt 0;border-bottom:.5pt solid #C9CDC2;font-weight:400;}
+.ea__tabell thead th{font-size:8pt;color:#586059;border-bottom:.75pt solid #15251D;}
+.ea__tabell td.tall,.ea__tabell th.tall{text-align:right;padding-right:0;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.ea__tabell .ea__del th{padding-left:10pt;color:#586059;}
+.ea__tabell .ea__sum th,.ea__tabell .ea__sum td{font-weight:600;border-top:.75pt solid #15251D;border-bottom:0;padding-top:7pt;}
+.ea__total{margin-top:20pt;padding:12pt 14pt;border:1pt solid #15251D;display:flex;justify-content:space-between;align-items:baseline;}
+.ea__total strong{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:20pt;font-variant-numeric:tabular-nums lining-nums;}
+.ea__note{font-size:8.5pt;color:#586059;margin-top:16pt;max-width:150mm;}
+.ea__bunn{margin-top:26pt;border-top:.5pt solid #C9CDC2;padding-top:8pt;font-family:"IBM Plex Mono",monospace;font-size:8pt;color:#586059;display:flex;justify-content:space-between;}
