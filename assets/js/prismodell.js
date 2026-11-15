@@ -20,13 +20,13 @@
   //  Lønnskjøring er det som faktisk følger antall ansatte, og prises deretter.
   //  Forskjell mellom typer virksomhet er et fast tillegg, ikke en faktor.
   var PRISMODELL = {
-    grunnpris: 5500,          // kr/mnd basisarbeid per enhet
+    grunnpris: 10000,         // kr/mnd basisarbeid per enhet
     perAnsatt: 75,            // kr/mnd per ansatt (uten lønnskjøring)
     perElev: 9,               // kr/mnd per elev/barn opp til terskelen
     elevTerskel: 200,         // antall elever/barn før lavere sats slår inn
     perElevOver: 4.5,         // kr/mnd per elev/barn over terskelen
     perAnsattLonn: 200,       // kr/mnd per ansatt HVIS lønnskjøring inkluderes
-    arsoppgjor: 12000,        // kr/år per enhet (forberedelse, eks. revisjon)
+    arsoppgjor: 18000,        // kr/år per enhet (forberedelse, eks. revisjon)
     typeTillegg: { barnehage: 0, grunnskole: 0, ungdomsskole: 0, videregaaende: 500 }, // kr/mnd
     sammenlignTimepris: 1090  // timepris brukt i sammenligningen mot timebasert byrå
   };
